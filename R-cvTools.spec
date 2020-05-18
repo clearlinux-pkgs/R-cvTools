@@ -4,7 +4,7 @@
 #
 Name     : R-cvTools
 Version  : 0.3.2
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/cvTools_0.3.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/cvTools_0.3.2.tar.gz
 Summary  : Cross-validation tools for regression models
@@ -13,7 +13,6 @@ License  : GPL-2.0+
 Requires: R-robustbase
 BuildRequires : R-robustbase
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 cross-validation with minimal programming effort and assist
@@ -21,21 +20,22 @@ cross-validation with minimal programming effort and assist
 
 %prep
 %setup -q -c -n cvTools
+cd %{_builddir}/cvTools
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571814745
+export SOURCE_DATE_EPOCH=1589785230
 
 %install
-export SOURCE_DATE_EPOCH=1571814745
+export SOURCE_DATE_EPOCH=1589785230
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
