@@ -4,7 +4,7 @@
 #
 Name     : R-cvTools
 Version  : 0.3.2
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/cvTools_0.3.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/cvTools_0.3.2.tar.gz
 Summary  : Cross-validation tools for regression models
